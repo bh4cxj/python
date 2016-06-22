@@ -52,7 +52,7 @@ class getWTR():
         content = resp.read()
         ax = content.find('[')
         bx = content[::-1].find(']')
-        self.tmp = eval(content[ax+1:].strip()[::-1][bx+1:].strip()[::-1])
+        self.tmp = eval(content[ax+1:][::-1][bx+1:][::-1])
 #        self.data = json.loads(self.tmp)
 #        self.now = json.dumps(self.data["now"], ensure_ascii=False)
 #        self.aqi = json.dumps(self.data["aqi"], ensure_ascii=False, indent=4)
